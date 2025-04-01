@@ -5,3 +5,51 @@ body {
   padding: 0 auto;
 
 }
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cards-container p {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem; 
+  padding: 2rem;
+  background-color: rgba(39, 188, 234, 20%);
+  max-height: 90vh;
+  width: 25%;
+  box-sizing: border-box; /* makes sure padding is included in width/height */
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+}
+.product-card > img {
+  max-width: 100%; /* Ensures the image does not exceed the card's width */
+  height: auto; /* Maintains the aspect ratio of the image */
+  max-height: 50vh; /* Ensures the image does not exceed the card's height */
+  border-radius: 0.5rem; /* Optional: adds rounded corners to the image */
+  padding: 1rem;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 1300px) {
+  .product-card {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .product-card {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .product-card {
+    width: 70%;
+  }
+}
+

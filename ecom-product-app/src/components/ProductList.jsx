@@ -1,18 +1,23 @@
-import React from 'react'
-import { useState } from 'react'
 
-function ProductList({ products }) {
+
+import React from 'react';
+
+
+function ProductList({ Products }) {
     return (
-        <div>
-            {products.map((product) => (
-                <div key={product.id}>
-                    <img src={product.image || 'https://via.placeholder.com/150'} alt={product.title || 'Placeholder'} />
-                    <h2>{product.title}</h2>
+        <div className="cards-container">
+            {Products.map((product) => (
+                <div className = "product-card" key={product.id}>
+                    <h1>{product.title}</h1>
                     <p>{product.description}</p>
-                </div>
+                    <p>Price: ${product.price}</p>
+                    <img src={product.image} alt={product.title} />
+                </div>   
+                
             ))}
         </div>
     );
 }
 
-export default ProductList
+export default ProductList;
+
