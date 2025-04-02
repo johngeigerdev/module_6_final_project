@@ -1,11 +1,11 @@
 import './App.css'
 import React from 'react'
 import ProductList from './components/ProductList'
-
+import { useState } from 'react'
 
 function App() {
 
-  const Products = [
+  const [products, setProducts] = useState ([
     {
         id: 1,
         title: 'T-shirt',
@@ -42,11 +42,11 @@ function App() {
             count: 10,
         },
     },
-];
+]);
 
   return (
     <>
-      <ProductList Products={Products}/>
+      <ProductList products={products}/>
       
     </>
   )

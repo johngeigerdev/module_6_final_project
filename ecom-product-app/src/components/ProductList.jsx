@@ -1,22 +1,19 @@
-
-
 import React from 'react';
+import ProductItem from './ProductItem.jsx';
 
+const ProductList = ({ products }) => {
 
-function ProductList({ Products }) {
     return (
-        <div className="cards-container">
-            {Products.map((product) => (
-                <div className = "product-card" key={product.id}>
-                    <h1>{product.title}</h1>
-                    <p>{product.description}</p>
-                    <p>Price: ${product.price}</p>
-                    <img src={product.image} alt={product.title} />
-                </div>   
-                
-            ))}
+        <div className="product-list">
+            <h1 className='heading'>Product List</h1>
+            <div className="cards-container">
+                {products.map(product => (
+                <ProductItem key={product.id} product={product} />
+                ))}
+            </div>
+            
         </div>
-    );
+    )
 }
 
 export default ProductList;
