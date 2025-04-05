@@ -1,6 +1,7 @@
 import './App.css'
 import React from 'react'
 import ProductList from './components/ProductList'
+import Character from './components/Character.jsx'
 import { useState } from 'react'
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
 
   return (
     <>
+      <Character />
       <ProductList products={products}/>
       
     </>
